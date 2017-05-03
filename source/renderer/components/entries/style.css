@@ -1,0 +1,38 @@
+.container {
+
+}
+
+.list_entry {
+
+}
+
+.item_entry {
+  margin: 0 16px 24px;
+  padding: 12px 0 8px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.title_entry {
+  margin: 0 0 8px;
+  padding: 0 8px 8px;
+  border-bottom: solid 1px #d6d5da;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.list_tags {
+  margin: 0 8px 8px;
+  font-size: 12px;
+}
+
+.item_tag {
+  display: inline-block;
+  padding-right: 4px;
+}
+
+.videoframe {
+  height: calc((100vw - 32px) * 2 / 3);
+  max-height: 400px;
+  width: 100%;
+}

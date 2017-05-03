@@ -1,0 +1,23 @@
+.container {
+  margin: 0 16px 24px;
+  padding: 12px 0 8px;
+  background-color: #fff;
+}
+
+.title {
+  margin: 0 0 8px;
+  padding: 0 8px 8px;
+  border-bottom: solid 1px #d6d5da;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.row {
+  margin: 0 8px 8px;
+}
+
+.field {
+  padding: 8px 12px;
+  border: solid 1px #d6d5da;
+  width: 100%;
+}

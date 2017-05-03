@@ -1,0 +1,10 @@
+/* TEAM */
+
+  Katz
+  Twitter: @katz_ura
+
+/* SITE */
+
+  Site Name: nukindex
+  Site URL: http://nukindex.jetboy.jp/
+  Language: Japanese

@@ -1,0 +1,16 @@
+.container {
+  padding: 36px 0 48px;
+  background-color: #66648b;
+  color: #d6d5da;
+  font-size: 12px;
+}
+
+.row {
+  margin: 16px 0 24px;
+  text-align: center;
+}
+
+.row a {
+  padding: 0 8px;
+  color: #d6d5da;
+}
