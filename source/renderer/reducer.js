@@ -1,8 +1,6 @@
 import { combineReducers } from "redux";
-import actressRankingReducer from "./components/ranking-actress/reducer";
-import entriesReducer from "./components/entries/reducer";
+import appReducer from "./components/app/reducer";
 
 export default combineReducers({
-  "actressRanking": actressRankingReducer,
-  "entries": entriesReducer
+  "app": appReducer
 });

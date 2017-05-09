@@ -2,13 +2,9 @@ import React from "react";
 import styles from "./style";
 
 export default class Component extends React.Component {
-  componentDidMount() {
-    this.props.loadVideosData();
-  }
-
   render() {
-    const entryItems = this.props.entries.list.filter(entryData => {
-      const queryString = this.props.entries.entrySearchQuery;
+    const entryItems = this.props.videos.filter(entryData => {
+      const queryString = this.props.entrySearchQuery;
 
       if((queryString && queryString.length > 0) &&
           (entryData.title.indexOf(queryString) < 0) &&
@@ -18,7 +14,11 @@ export default class Component extends React.Component {
       else {
         return true;
       }
-    }).map(entryData => {
+    }).map((entryData, index) => {
+      if(index == 0) {
+        this.props.setVideoFrameToFirstEntry(entryData.videoId);
+      }
+
       const tagItems = entryData.tags.map(tag => {
         return (
           <li className={styles.item_tag}>
@@ -38,7 +38,7 @@ export default class Component extends React.Component {
           </ul>
 
           {(() => {
-            if(this.props.entries.selectedId == entryData.videoId) {
+            if(this.props.selectedId == entryData.videoId) {
               return (
                 <iframe className={styles.videoframe}
                     frameBorder="0" scrolling="no" allowFullScreen="true"

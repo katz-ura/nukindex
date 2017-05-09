@@ -33,9 +33,9 @@ function buildAssets() {
 
 function buildHTML() {
   gulp.src(["source/**/*.html", "!source/renderer/**/*"])
-      .pipe(minifyHTML({
-        "collapseWhitespace": true
-      }))
+      //.pipe(minifyHTML({
+      //  "collapseWhitespace": true
+      //}))
       .pipe(gulp.dest("build"));
 }
 
@@ -53,7 +53,7 @@ function buildRenderer() {
     "output": "./build/styles/bundle.css"
   }).transform(babelify).bundle()
       .pipe(source("bundle.js"))
-      .pipe(buffer())
-      .pipe(uglify())
+      //.pipe(buffer())
+      //.pipe(uglify())
       .pipe(gulp.dest("build/renderer"));
 }

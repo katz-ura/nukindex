@@ -1,9 +1,9 @@
 export default {
-  "changeQuery": queryString => {
+  "changeQuery": data => {
     return dispatch => {
       dispatch({
-        "type": "CHANGE_QUERY",
-        "data": queryString
+        "type": "CHANGE_ENTRY_SEARCH_QUERY",
+        "data": data
       });
     };
   }

@@ -1,19 +1,26 @@
 const initialState = {
   "selectedId": 0,
   "entrySearchQuery": "",
-  "list": []
+  "videos": [],
+  "actresses": []
 };
 
 export default function reducer(state = initialState, action) {
+  console.log("reducer: ", action);
+  
   switch(action.type) {
     case "VIDEOS_DATA_LOADED":
       return Object.assign({}, state, {
-        "selectedId": action.data[0].videoId,
-        "list": action.data.map(item => {
+        "videos": action.data.map(item => {
           item.hidden = false;
 
           return item;
         })
+      });
+
+    case "ACTRESSES_DATA_LOADED":
+      return Object.assign({}, state, {
+        "actresses": action.data
       });
 
     case "CHANGE_SELECTED_ID":
@@ -21,7 +28,7 @@ export default function reducer(state = initialState, action) {
         "selectedId": action.data
       });
 
-    case "CHANGE_QUERY":
+    case "CHANGE_ENTRY_SEARCH_QUERY":
       return Object.assign({}, state, {
         "entrySearchQuery": action.data
       });

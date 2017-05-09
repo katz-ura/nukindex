@@ -2,12 +2,8 @@ import React from "react";
 import styles from "./style";
 
 export default class Component extends React.Component {
-  componentDidMount() {
-    this.props.loadActressesData();
-  }
-
   render() {
-    const actressRankingItems = this.props.actressRanking.list.map(actress => {
+    const actressRankingItems = this.props.actresses.map(actress => {
       return (
         <li className={styles.item}>
           <a href="#">{actress}</a>

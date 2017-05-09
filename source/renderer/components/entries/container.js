@@ -9,20 +9,20 @@ export default connect(
 )(Component);
 
 function mapStateToProps(state) {
-  return state;
+  return state.app;
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    "loadVideosData": () => {
-      dispatch(Actions.loadVideosData());
-    },
     "clickEntryItem": selectedId => {
       return ev => {
         window.scroll(0, ev.currentTarget.offsetTop);
 
         dispatch(Actions.changeSelectedId(selectedId));
       };
+    },
+    "setVideoFrameToFirstEntry": videoId => {
+      dispatch(Actions.changeSelectedId(videoId));
     }
-  }
+  };
 }

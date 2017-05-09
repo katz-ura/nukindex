@@ -6,6 +6,10 @@ import MainComponent from "../main/view";
 import FooterComponent from "../footer/view";
 
 export default class Component extends React.Component {
+  componentWillMount() {
+    this.props.loadData();
+  }
+
   render() {
     return (
       <div className={styles.container}>
